@@ -69,6 +69,8 @@ wp-content/*
 wp-content/plugins/*
 !wp-content/plugins/mackman_staff_profiles/
 !wp-content/plugins/mackman-cf7-mailchimp-bridge/
+!wp-content/plugins/cookies-compliance
+!wp-content/plugins/cp-polls
 
 # ADVANCED OPTION (disabled by default)
 # ignore everything in the "themes" directory,
