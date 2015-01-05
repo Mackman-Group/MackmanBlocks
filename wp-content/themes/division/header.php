@@ -54,7 +54,6 @@
 <div class="secondary-nav">
 
   <div class="wrapper">
-	
   	<div class="tel">Get in touch today by calling <b>01787 388038</b></div>
   	<?php wp_nav_menu( array( 'theme_location' => 'top-menu' ) ); ?>
   </div><!-- .wrapper -->
