@@ -39,13 +39,17 @@ if ( ! function_exists( 'mackman_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'mackman_setup' );
 
-// Enqueue style sheet.
-add_action( 'wp_enqueue_scripts', 'mackman_enqueue_style_sheet' );
+/**
+ * Enqueues the theme stylesheets
+ *
+ * @return void
+ */
 function mackman_enqueue_style_sheet() {
 
 	wp_enqueue_style( 'mackman', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
 }
+add_action( 'wp_enqueue_scripts', 'mackman_enqueue_style_sheet' );
 
 /**
  * Register block styles.
