@@ -2,7 +2,7 @@
 /**
  * Title: Call-to-action with text, button.
  * Slug: mackman/general-cta-button-contrast-background
- * Categories: calltoaction
+ * Categories: call-to-action
  * Viewport Width: 1280
  */
 ?>

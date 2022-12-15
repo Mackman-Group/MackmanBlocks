@@ -34,6 +34,43 @@ if ( ! function_exists( 'mackman_setup' ) ) {
 
 		// Remove core block patterns.
 		remove_theme_support( 'core-block-patterns' );
+		
+		// Register the pattern category
+		register_block_pattern_category(
+			'call-to-action', array(
+				'label' => __( 'Call To Action', 'mackman' )
+			)
+		);
+		
+		register_block_pattern_category(
+			'hero', array(
+				'label' => __( 'Hero', 'mackman' )
+			)
+		);
+		
+		register_block_pattern_category(
+			'media', array(
+				'label' => __( 'Media', 'mackman' )
+			)
+		);
+		
+		register_block_pattern_category(
+			'pricing', array(
+				'label' => __( 'Pricing', 'mackman' )
+			)
+		);
+		
+		register_block_pattern_category(
+			'team', array(
+				'label' => __( 'Teams', 'mackman' )
+			)
+		);
+		
+		register_block_pattern_category(
+			'testimonials', array(
+				'label' => __( 'Testimonials', 'mackman' )
+			)
+		);
 
 	}
 }
