@@ -12,7 +12,7 @@
 <!-- wp:group {"align":"wide","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
 <div class="wp-block-group alignwide">
 <!-- wp:paragraph -->
-<p>© <?php echo esc_html( gmdate( 'Y' ) ); ?> Your Company LLC</p>
+<p>© <?php echo esc_html( gmdate( 'Y' ) ); ?> All rights reserved.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p><a href="#"><?php echo esc_html__( 'Privacy Policy', 'mackman' ); ?></a> · <a href="#"><?php echo esc_html__( 'Terms of Service', 'mackman' ); ?></a> · <a href="#"><?php echo esc_html__( 'Contact Us', 'mackman' ); ?></a></p>

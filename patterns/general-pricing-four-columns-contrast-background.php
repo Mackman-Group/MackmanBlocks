@@ -2,7 +2,7 @@
 /**
  * Title: Pricing table with list, buttons.
  * Slug: mackman/general-pricing-four-columns-contrast-background
- * Categories: featured
+ * Categories: pricing
  * Viewport Width: 1280
  */
 ?>

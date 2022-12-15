@@ -2,7 +2,7 @@
 /**
  * Title: Section with image, text, buttons.
  * Slug: mackman/general-hero-two-columns-contrast-background
- * Categories: featured
+ * Categories: hero
  * Viewport Width: 1280
  */
 ?>

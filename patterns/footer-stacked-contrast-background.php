@@ -22,7 +22,7 @@
 </div>
 <!-- /wp:buttons -->
 <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size">© <?php echo esc_html( gmdate( 'Y' ) ); ?> Your Company LLC · <a href="#"><?php echo esc_html__( 'Contact Us', 'mackman' ); ?></a></p>
+<p class="has-text-align-center has-small-font-size">© <?php echo esc_html( gmdate( 'Y' ) ); ?> All rights reserved. · <a href="#"><?php echo esc_html__( 'Contact Us', 'mackman' ); ?></a></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

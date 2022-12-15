@@ -2,7 +2,7 @@
 /**
  * Title: Call-to-action with text, button.
  * Slug: mackman/general-cta-button
- * Categories: call-to-action
+ * Categories: calltoaction
  * Viewport Width: 1280
  */
 ?>

@@ -14,12 +14,12 @@
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"30px","left":"30px"}}}} -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":5300,"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"contrast"} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-logo-white.jpg'; ?>" alt="mackman Logo" class="has-border-color has-contrast-border-color wp-image-5300" style="border-width:1px"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="mackman Logo" class="has-border-color has-contrast-border-color" style="border-width:1px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":5301,"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"contrast"} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-logo-black.jpg'; ?>" alt="mackman Logo" class="has-border-color has-contrast-border-color wp-image-5301" style="border-width:1px"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="mackman Logo" class="has-border-color has-contrast-border-color" style="border-width:1px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

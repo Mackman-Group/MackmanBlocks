@@ -12,10 +12,10 @@
 <!-- wp:group {"align":"wide","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
 <div class="wp-block-group alignwide">
 <!-- wp:paragraph -->
-<p>© <?php echo esc_html( gmdate( 'Y' ) ); ?> Your Company LLC · <a href="#"><?php echo esc_html__( 'Contact Us', 'mackman' ); ?></a></p>
+<p>© <?php echo esc_html( gmdate( 'Y' ) ); ?> All rights reserved.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><a href="#">Facebook</a> · <a href="#">Twitter</a> · <a href="#">Instagram</a></p>
+<p>A Mackman Group collaboration - Market Research by <a class="site-credits" href="https://www.mackmanresearch.co.uk" target="_blank" rel="nofollow">Mackman Research</a> | Website Design by <a class="site-credits" href="https://mackman.co.uk" target="_blank" rel="nofollow">Mackman</a></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
