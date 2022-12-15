@@ -5,6 +5,7 @@ An experimental block theme for designers, developers, and creators.
 ## About
 
 mackman is a Full Site Editing theme for WordPress that extends the incredible power of the editor, enables builders to create amazing sites with little effort, and elevates the potential for freelancers and entrepreneurs.
+The site was originally forked from WP Engines Frost theme. See the Frost theme in action at [frostwp.com](https://frostwp.com/).
 
 ## Requirements
 
