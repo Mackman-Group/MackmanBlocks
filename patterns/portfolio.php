@@ -2,7 +2,7 @@
 /**
  * Title: Portfolio with images, text.
  * Slug: mackman/general-portfolio
- * Categories: portfolio
+ * Categories: media
  * Viewport Width: 1280
  */
 ?>

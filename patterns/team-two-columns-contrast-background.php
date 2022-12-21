@@ -37,7 +37,7 @@
                     
                     <!-- wp:image {"id":3488,"sizeSlug":"full","linkDestination":"none"} -->
                       <figure class="wp-block-image size-full">
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-white_800x800.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
                       </figure>
                     <!-- /wp:image -->
                       
@@ -69,7 +69,7 @@
                     
                     <!-- wp:image {"id":3488,"sizeSlug":"full","linkDestination":"none"} -->
                       <figure class="wp-block-image size-full">
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-white_800x800.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
                       </figure>
                     <!-- /wp:image -->
                       
@@ -101,7 +101,7 @@
                     
                     <!-- wp:image {"id":3488,"sizeSlug":"full","linkDestination":"none"} -->
                       <figure class="wp-block-image size-full">
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-white_800x800.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
                       </figure>
                     <!-- /wp:image -->
                       
@@ -139,7 +139,7 @@
                     
                     <!-- wp:image {"id":3488,"sizeSlug":"full","linkDestination":"none"} -->
                       <figure class="wp-block-image size-full">
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-white_800x800.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
                       </figure>
                     <!-- /wp:image -->
                       
@@ -171,7 +171,7 @@
                     
                     <!-- wp:image {"id":3488,"sizeSlug":"full","linkDestination":"none"} -->
                       <figure class="wp-block-image size-full">
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-white_800x800.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
                       </figure>
                     <!-- /wp:image -->
                       
@@ -203,7 +203,7 @@
                     
                     <!-- wp:image {"id":3488,"sizeSlug":"full","linkDestination":"none"} -->
                       <figure class="wp-block-image size-full">
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-white_800x800.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="Sample Image" class="wp-image-3488"/>
                       </figure>
                     <!-- /wp:image -->
                       

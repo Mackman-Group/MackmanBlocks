@@ -71,6 +71,12 @@ if ( ! function_exists( 'mackman_setup' ) ) {
 				'label' => __( 'Testimonials', 'mackman' )
 			)
 		);
+		
+		register_block_pattern_category(
+			'contact', array(
+				'label' => __( 'Contact', 'mackman' )
+			)
+		);
 
 	}
 }
