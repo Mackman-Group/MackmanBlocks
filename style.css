@@ -455,3 +455,9 @@ textarea {
 	}
 
 }
+
+@media (max-width: 768px) {
+	.reverse-mobile {
+		flex-direction: column-reverse;
+	}
+}
