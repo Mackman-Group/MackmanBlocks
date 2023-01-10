@@ -105,13 +105,13 @@
 		},
 		"custom": {
 			"fontWeight": {
-				"light": 300,
-				"regular": 400,
-				"medium": 500,
-				"semi-bold": 600,
+				"black": 900,
 				"bold": 700,
 				"extra-bold": 800,
-				"black": 900
+				"light": 300,
+				"medium": 500,
+				"regular": 400,
+				"semi-bold": 600
 			},
 			"lineHeight": {
 				"body": 1.75,
@@ -124,8 +124,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "640px",
-			"wideSize": "1200px"
+			"contentSize": "1440px",
+			"wideSize": "1920px"
 		},
 		"spacing": {
 			"spacingSizes": [
@@ -165,23 +165,231 @@
 			]
 		},
 		"typography": {
+			"customFontSize": true,
 			"dropCap": false,
 			"fluid": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "Outfit, sans-serif",
-					"name": "Outfit",
-					"slug": "primary",
+					"fontFace": [
+						{
+							"fontFamily": "DM Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/dm-sans/DMSans-Regular.woff2"
+							]
+						},
+						{
+							"fontFamily": "DM Sans",
+							"fontStretch": "normal",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/dm-sans/DMSans-Regular-Italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "DM Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/dm-sans/DMSans-Bold.woff2"
+							]
+						},
+						{
+							"fontFamily": "DM Sans",
+							"fontStretch": "normal",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/dm-sans/DMSans-Bold-Italic.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"DM Sans\", sans-serif",
+					"name": "DM Sans",
+					"slug": "dm-sans"
+				},
+				{
 					"fontFace": [
 						{
 							"fontDisplay": "block",
-							"fontFamily": "Outfit",
+							"fontFamily": "IBM Plex Mono",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [ "file:./assets/fonts/lato-regular.woff2" ]
+							"fontWeight": "300",
+							"src": [
+								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Light.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Mono",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Mono",
+							"fontStretch": "normal",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Italic.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Mono",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Bold.woff2"
+							]
 						}
-					]
+					],
+					"fontFamily": "'IBM Plex Mono', monospace",
+					"name": "IBM Plex Mono",
+					"slug": "ibm-plex-mono"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Inter",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "200 900",
+							"src": [
+								"file:./assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf"
+							]
+						}
+					],
+					"fontFamily": "\"Inter\", sans-serif",
+					"name": "Inter",
+					"slug": "inter"
+				},
+				{
+					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Source Serif Pro",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "200 900",
+							"src": [
+								"file:./assets/fonts/source-serif-pro/SourceSerif4Variable-Roman.ttf.woff2"
+							]
+						},
+						{
+							"fontFamily": "Source Serif Pro",
+							"fontStretch": "normal",
+							"fontStyle": "italic",
+							"fontWeight": "200 900",
+							"src": [
+								"file:./assets/fonts/source-serif-pro/SourceSerif4Variable-Italic.ttf.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Source Serif Pro\", serif",
+					"name": "Source Serif Pro",
+					"slug": "source-serif-pro"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "normal",
+							"fontWeight": "100",
+							"src": [
+								"file:./assets/fonts/lato_100.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": [
+								"file:./assets/fonts/lato_300.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/lato_700.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": [
+								"file:./assets/fonts/lato_900.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "italic",
+							"fontWeight": "100",
+							"src": [
+								"file:./assets/fonts/lato_100italic.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "italic",
+							"fontWeight": "300",
+							"src": [
+								"file:./assets/fonts/lato_300italic.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/lato_regular.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/lato_italic.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/lato_700italic.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "italic",
+							"fontWeight": "900",
+							"src": [
+								"file:./assets/fonts/lato_900italic.ttf"
+							]
+						}
+					],
+					"fontFamily": "Lato",
+					"slug": "lato"
 				},
 				{
 					"fontFamily": "monospace",
@@ -192,14 +400,20 @@
 			"fontSizes": [
 				{
 					"fluid": false,
+					"name": "xSmall",
+					"size": "14px",
+					"slug": "x-small"
+				},
+				{
+					"fluid": false,
 					"name": "Small",
 					"size": "16px",
 					"slug": "small"
 				},
 				{
 					"fluid": {
-						"min": "18px",
-						"max": "20px"
+						"max": "20px",
+						"min": "18px"
 					},
 					"name": "Medium",
 					"size": "20px",
@@ -207,8 +421,8 @@
 				},
 				{
 					"fluid": {
-						"min": "20px",
-						"max": "24px"
+						"max": "24px",
+						"min": "20px"
 					},
 					"name": "Large",
 					"size": "24px",
@@ -216,48 +430,21 @@
 				},
 				{
 					"fluid": {
-						"min": "24px",
-						"max": "30px"
+						"max": "48px",
+						"min": "40px"
 					},
 					"name": "xLarge",
-					"size": "30px",
+					"size": "48px",
 					"slug": "x-large"
 				},
 				{
 					"fluid": {
-						"min": "30px",
-						"max": "36px"
+						"max": "56px",
+						"min": "52px"
 					},
-					"name": "36px",
-					"size": "36px",
-					"slug": "max-36"
-				},
-				{
-					"fluid": {
-						"min": "36px",
-						"max": "48px"
-					},
-					"name": "48px",
-					"size": "48px",
-					"slug": "max-48"
-				},
-				{
-					"fluid": {
-						"min": "42px",
-						"max": "60px"
-					},
-					"name": "60px",
-					"size": "60px",
-					"slug": "max-60"
-				},
-				{
-					"fluid": {
-						"min": "48px",
-						"max": "72px"
-					},
-					"name": "72px",
-					"size": "72px",
-					"slug": "max-72"
+					"name": "xxLarge",
+					"size": "56px",
+					"slug": "xx-large"
 				}
 			]
 		},
