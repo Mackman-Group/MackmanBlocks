@@ -15,7 +15,7 @@
         <!-- wp:column {"width":"50%"} -->
           <div class="wp-block-column" style="flex-basis:50%">
             
-            <!-- wp:media-text {"mediaId":277,"mediaLink":"http://mackman-group-block-test-site.test/wp-content/themes/mackman/assets/images/holding.jpg","mediaType":"image","className":"stack"} -->
+            <!-- wp:media-text {"mediaId":277,"mediaLink":"<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>","mediaType":"image","className":"stack"} -->
               <div class="wp-block-media-text alignwide is-stacked-on-mobile stack">
                 <figure class="wp-block-media-text__media">
                   <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="" class="wp-image-277 size-full"/>
@@ -52,7 +52,7 @@
         <!-- wp:column {"width":"50%"} -->
           <div class="wp-block-column" style="flex-basis:50%">
             
-            <!-- wp:media-text {"mediaId":277,"mediaLink":"http://mackman-group-block-test-site.test/wp-content/themes/mackman/assets/images/holding.jpg","mediaType":"image","className":"stack"} -->
+            <!-- wp:media-text {"mediaId":277,"mediaLink":"<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>","mediaType":"image","className":"stack"} -->
               <div class="wp-block-media-text alignwide is-stacked-on-mobile stack">
                 <figure class="wp-block-media-text__media">
                   <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="" class="wp-image-277 size-full"/>

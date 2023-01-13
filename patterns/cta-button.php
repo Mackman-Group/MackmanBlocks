@@ -2,8 +2,9 @@
 /**
  * Title: Call-to-action with text, button.
  * Slug: mackman/general-cta-button
- * Categories: call-to-action
+ * Categories: call-to-action, featured
  * Viewport Width: 1280
+ * Block Types: core/navigation, core/site-title, core/social-links
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0px"},"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","right":"30px","left":"30px"}}},"layout":{"inherit":true,"type":"constrained"}} -->

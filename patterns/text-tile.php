@@ -9,10 +9,10 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0px"},"padding":{"top":"var:preset|spacing|x-large","right":"30px","bottom":"var:preset|spacing|x-large","left":"30px"}}},"className":"has-background-color","layout":{"type":"constrained"}} -->
   <div class="wp-block-group alignfull has-background-color" style="margin-top:0px;padding-top:var(--wp--preset--spacing--x-large);padding-right:30px;padding-bottom:var(--wp--preset--spacing--x-large);padding-left:30px">
     
-    <!-- wp:media-text {"mediaId":277,"mediaLink":"https://mackmangrp.wpengine.com/homepage/linkedin-sales-solutions-mis5fyji7q0-unsplash/","mediaType":"image","className":"stack"} -->
+    <!-- wp:media-text {"mediaId":277,"mediaLink":"<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>","mediaType":"image","className":"stack"} -->
       <div class="wp-block-media-text alignwide is-stacked-on-mobile stack">
         <figure class="wp-block-media-text__media">
-          <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="" class="size-full"/>
+          <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/holding.jpg'; ?>" alt="" class="wp-image-277 size-full"/>
         </figure>
         <div class="wp-block-media-text__content">
           
@@ -32,7 +32,7 @@
                   <a class="wp-block-button__link wp-element-button">Click Here</a>
                 </div>
               <!-- /wp:button -->
-              
+                
             </div>
           <!-- /wp:buttons -->
             

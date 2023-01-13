@@ -27,7 +27,7 @@
               <div class="wp-block-group has-background-color has-base-color has-contrast-background-color has-text-color has-background" style="padding-top:20px;padding-right:30px;padding-bottom:20px;padding-left:30px">
                 
                 <!-- wp:heading {"textAlign":"center","level":4} -->
-                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Personal', 'mackman' ); ?> - $95</h4>
+                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Personal', 'mackman' ); ?> - £95</h4>
                 <!-- /wp:heading -->
               
               </div>
@@ -101,7 +101,7 @@
               <div class="wp-block-group has-background-color has-base-color has-contrast-background-color has-text-color has-background" style="padding-top:20px;padding-right:30px;padding-bottom:20px;padding-left:30px">
                 
                 <!-- wp:heading {"textAlign":"center","level":4} -->
-                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Professional', 'mackman' ); ?> - $295</h4>
+                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Professional', 'mackman' ); ?> - £295</h4>
                 <!-- /wp:heading -->
               </div>
             <!-- /wp:group -->
@@ -173,7 +173,7 @@
               <div class="wp-block-group has-background-color has-base-color has-contrast-background-color has-text-color has-background" style="padding-top:20px;padding-right:30px;padding-bottom:20px;padding-left:30px">
                 
                 <!-- wp:heading {"textAlign":"center","level":4} -->
-                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Enterprise', 'mackman' ); ?> - $495</h4>
+                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Enterprise', 'mackman' ); ?> - £495</h4>
                 <!-- /wp:heading -->
                   
               </div>
@@ -247,7 +247,7 @@
               <div class="wp-block-group has-background-color has-base-color has-contrast-background-color has-text-color has-background" style="padding-top:20px;padding-right:30px;padding-bottom:20px;padding-left:30px">
                 
                 <!-- wp:heading {"textAlign":"center","level":4} -->
-                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Ultimate', 'mackman' ); ?> - $995</h4>
+                  <h4 class="has-text-align-center" id="personal-95"><?php echo esc_html__( 'Ultimate', 'mackman' ); ?> - £995</h4>
                 <!-- /wp:heading -->
                 
               </div>

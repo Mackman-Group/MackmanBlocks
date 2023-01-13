@@ -35,46 +35,52 @@ if ( ! function_exists( 'mackman_setup' ) ) {
 		// Remove core block patterns.
 		remove_theme_support( 'core-block-patterns' );
 		
-		// Register the pattern category
+		// Register the 'Call To Action' pattern category
 		register_block_pattern_category(
 			'call-to-action', array(
 				'label' => __( 'Call To Action', 'mackman' )
 			)
 		);
 		
+		// Register the 'Hero' pattern category
 		register_block_pattern_category(
 			'hero', array(
 				'label' => __( 'Hero', 'mackman' )
 			)
 		);
 		
-		register_block_pattern_category(
-			'media', array(
-				'label' => __( 'Media', 'mackman' )
-			)
-		);
-		
-		register_block_pattern_category(
-			'pricing', array(
-				'label' => __( 'Pricing', 'mackman' )
-			)
-		);
-		
+		// Register the 'Teams' pattern category
 		register_block_pattern_category(
 			'team', array(
 				'label' => __( 'Teams', 'mackman' )
 			)
 		);
 		
+		// Register the 'Testimonials' pattern category
 		register_block_pattern_category(
 			'testimonials', array(
 				'label' => __( 'Testimonials', 'mackman' )
 			)
 		);
 		
+		// Register the 'Contact' pattern category
 		register_block_pattern_category(
 			'contact', array(
 				'label' => __( 'Contact', 'mackman' )
+			)
+		);
+		
+		// Register the 'Media' pattern category
+		register_block_pattern_category(
+			'media', array(
+				'label' => __( 'Media', 'mackman' )
+			)
+		);
+		
+		// Register the 'Pricing' pattern category
+		register_block_pattern_category(
+			'pricing', array(
+				'label' => __( 'Pricing', 'mackman' )
 			)
 		);
 
