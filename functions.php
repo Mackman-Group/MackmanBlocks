@@ -49,6 +49,20 @@ if ( ! function_exists( 'mackman_setup' ) ) {
 			)
 		);
 		
+		// Register the 'Cards' pattern category
+		register_block_pattern_category(
+			'cards', array(
+				'label' => __( 'Cards', 'mackman' )
+			)
+		);
+		
+		// Register the 'Icons' pattern category
+		register_block_pattern_category(
+			'icons', array(
+				'label' => __( 'Icons', 'mackman' )
+			)
+		);
+		
 		// Register the 'Teams' pattern category
 		register_block_pattern_category(
 			'team', array(
