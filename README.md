@@ -1,4 +1,4 @@
-# mackman
+# MackmanBlocks
 
 An experimental block theme for designers, developers, and creators.
 
