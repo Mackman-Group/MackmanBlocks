@@ -30,27 +30,27 @@
 			"gradients": [],
 			"palette": [
 				{
-					"color": "#ffffff",
+					"color": "#f4f4f4",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#000000",
+					"color": "#1a382e",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#990099",
+					"color": "#bca35d",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "#0066ff",
+					"color": "#ffffff",
 					"name": "Secondary",
 					"slug": "secondary"
 				},
 				{
-					"color": "#009999",
+					"color": "#e4eeed",
 					"name": "Tertiary",
 					"slug": "tertiary"
 				}
