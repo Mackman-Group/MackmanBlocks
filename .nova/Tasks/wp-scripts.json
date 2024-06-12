@@ -1,0 +1,20 @@
+{
+  "actions" : {
+    "build" : {
+      "postActions" : [
+        {
+          "script" : "npm run build",
+          "type" : "runScript"
+        }
+      ]
+    },
+    "run" : {
+      "postActions" : [
+        {
+          "script" : "npm start",
+          "type" : "runScript"
+        }
+      ]
+    }
+  }
+}
