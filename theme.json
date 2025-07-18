@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -41,16 +41,71 @@
 		},
 		"spacing": {
 			"customSpacingSize": true,
-			"spacingScale": {
-				"increment": 1.8,
-				"mediumStep": 1.8,
-				"operator": "*",
-				"steps": 5,
-				"unit": "rem"
-			}
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "xSmall",
+					"size": "20px",
+					"slug": "x-small"
+				},
+				{
+					"name": "Small",
+					"size": "clamp(30px, 4vw, 40px)",
+					"slug": "small"
+				},
+				{
+					"name": "Medium",
+					"size": "clamp(40px, 6vw, 60px)",
+					"slug": "medium"
+				},
+				{
+					"name": "Large",
+					"size": "clamp(50px, 8vw, 80px)",
+					"slug": "large"
+				},
+				{
+					"name": "xLarge",
+					"size": "clamp(60px, 10vw, 100px)",
+					"slug": "x-large"
+				},
+				{
+					"name": "X-Small",
+					"size": "0.56rem",
+					"slug": "30"
+				},
+				{
+					"name": "Small",
+					"size": "1rem",
+					"slug": "40"
+				},
+				{
+					"name": "Medium",
+					"size": "1.8rem",
+					"slug": "50"
+				},
+				{
+					"name": "Large",
+					"size": "3.24rem",
+					"slug": "60"
+				},
+				{
+					"name": "X-Large",
+					"size": "5.83rem",
+					"slug": "70"
+				}
+			],
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw",
+				"%"
+			]
 		},
 		"typography": {
 			"customFontSize": false,
+			"defaultFontSizes": false,
 			"fluid": true,
 			"fontFamilies": [
 				{
@@ -123,29 +178,49 @@
 			],
 			"fontSizes": [
 				{
-					"name": "Small",
-					"size": "14px",
-					"slug": "small"
+					"name": "Hero",
+					"size": "4.0689rem",
+					"slug": "hero"
 				},
 				{
-					"name": "Normal",
-					"size": "16px",
-					"slug": "normal"
+					"name": "XX Large",
+					"size": "3.2551rem",
+					"slug": "xx-large"
 				},
 				{
-					"name": "Medium",
-					"size": "32px",
-					"slug": "medium"
+					"name": "Extra Large",
+					"size": "2.604rem",
+					"slug": "extra-large"
 				},
 				{
 					"name": "Large",
-					"size": "48px",
+					"size": "2.0836rem",
 					"slug": "large"
 				},
 				{
-					"name": "Hero",
-					"size": "78px",
-					"slug": "hero"
+					"name": "Medium",
+					"size": "1.6667rem",
+					"slug": "medium"
+				},
+				{
+					"name": "Normal",
+					"size": "1.3333rem",
+					"slug": "normal"
+				},
+				{
+					"name": "Small",
+					"size": "1.0667rem",
+					"slug": "small"
+				},
+				{
+					"name": "Extra Small",
+					"size": "0.8533rem",
+					"slug": "extra-small"
+				},
+				{
+					"name": "XX Small",
+					"size": "0.6827rem",
+					"slug": "xx-small"
 				}
 			]
 		},
@@ -216,5 +291,5 @@
 			"lineHeight": "1.5"
 		}
 	},
-	"version": 2
+	"version": 3
 }

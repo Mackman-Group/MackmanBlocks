@@ -11,11 +11,15 @@
       "lint:css": "wp-scripts lint-style",
       "lint:js": "wp-scripts lint-js",
       "packages-update": "wp-scripts packages-update",
-      "plugin-zip": "wp-scripts plugin-zip"
+      "plugin-zip": "wp-scripts plugin-zip",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/Mackman-Group/WilliamBlyth.git"
     },
     "devDependencies": {
-      "@wordpress/prettier-config": "^3.13.0",
-      "@wordpress/scripts": "^27.6.0",
+      "@wordpress/scripts": "^30.10.0",
       "copy-webpack-plugin": "^12.0.2",
       "webpack-remove-empty-scripts": "^1.0.4"
     }
