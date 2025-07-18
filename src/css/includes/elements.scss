@@ -1,0 +1,40 @@
+/* Defaults
+---------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="submit"],
+textarea:focus,
+.wp-element-button {
+  transition: all 0.2s ease-in-out;
+}
+
+a,
+a:not(.wp-element-button),
+a:focus,
+a:hover {
+  text-decoration-thickness: 1px;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+b,
+strong {
+  font-weight: var(--wp--custom--font-weight--medium);
+}
+
+blockquote {
+  margin: 0;
+}

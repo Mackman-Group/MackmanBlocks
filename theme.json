@@ -269,10 +269,31 @@
 						}
 					}
 				}
+			},
+			"core/group": {
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var(--wp--preset--color--primary)"
+						}
+					}
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--preset--spacing--medium)",
+						"top": "var(--wp--preset--spacing--medium)"
+					},
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--medium)",
+						"left": "var(--wp--preset--spacing--medium)",
+						"right": "var(--wp--preset--spacing--medium)",
+						"top": "var(--wp--preset--spacing--medium)"
+					}
+				}
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--background)",
+			"background": "var(--wp--preset--color--white)",
 			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
