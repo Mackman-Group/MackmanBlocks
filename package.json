@@ -16,7 +16,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+ssh://git@github.com/Mackman-Group/WilliamBlyth.git"
+      "url": "git@github.com:Mackman-Group/MackmanBlocks.git"
     },
     "devDependencies": {
       "@wordpress/scripts": "^30.10.0",

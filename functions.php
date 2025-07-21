@@ -9,7 +9,7 @@
 
 namespace MG\MGBlocks;
 
-//  Prevents directly accessing plugin files
+// Prevents directly accessing plugin files
 if (!function_exists("add_action")) {
   echo "Seems like you got here by accident. 😛";
   exit();
