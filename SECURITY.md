@@ -1,21 +1,13 @@
 # Security Policy
 
-## Supported Versions
+This repository is the Mackman Group base block theme. If you find a security vulnerability in it, please
+report it privately rather than opening a public issue.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+## Reporting a vulnerability
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Email support@mackmangroup.co.uk with a description of the issue and the steps to reproduce it. We will
+acknowledge your report and let you know what happens next.
 
-## Reporting a Vulnerability
+## Supported versions
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Only the latest released version of this theme (see `docs/CHANGELOG.md`) is supported with security fixes.

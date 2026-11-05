@@ -11,3 +11,4 @@ vendor/
 **/*.map
 .ignore
 .github_token
+.claude
