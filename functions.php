@@ -8,7 +8,7 @@
  * @link    https://mackman.co.uk
  */
 
-namespace MG\MGBlocks;
+namespace MGBlocks;
 
 // Prevents directly accessing plugin files
 if (!function_exists('add_action')) {
@@ -86,7 +86,7 @@ add_filter('wp_handle_upload_prefilter', __NAMESPACE__ . '\limit_upload_file_siz
  * @param string $size Upload size limit (in bytes).
  * @return int (maybe) Filtered size limit.
  */
-function filter_site_upload_size_limit($size) {
+function filter_site_upload_size_limit($bytes) {
   // Set the upload size limit to 100 KB for users who are able to read a post (every user). Swap to !current_user_can(manage_options) for everyone except admins.
   if (current_user_can('read')) {
     // 1024 bytes in a kb, so times by required limit.
