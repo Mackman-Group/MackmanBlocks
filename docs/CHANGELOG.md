@@ -24,6 +24,20 @@ Write each entry for a developer who was not there: what changed and where, in o
 - `CLAUDE.md`: a "Starting a client build" workflow and a "Renaming for a client build" checklist, covering
   intake of the studio's design-system brief and the content team's copy/structure brief, and renaming the
   theme's folder, namespace, text domain and pattern-slug prefix to the client
+- `package.json`: an `overrides` entry pinning `typescript` to `5.4.5`, so npm can't resolve an incompatible
+  TypeScript major into the eslint toolchain (see Known issues in MEMORY.md)
+- Phase 3 locking foundation: `templates/page.html`; two content-only locked reference patterns,
+  `mackman/hero-standard-light` (post title, a subtitle bound to post meta, featured image) and
+  `mackman/text-standard-light` (heading and body text); a `hero` pattern category; a `page_subtitle` post
+  meta field bound to the Hero's subtitle via Block Bindings; a locked default block template (the same
+  Hero/Body content, inlined) and `allowed_block_types_all` restriction for the `page` post type, via
+  `functions.php`. Verified live in the browser: a new Page pre-populates locked, editable only in place
+
+### Changed
+
+- `@wordpress/scripts` 30.19.0 → 30.27.0, `webpack-remove-empty-scripts` 1.0.4 → 1.1.1, and `/assets`
+  rebuilt (`npm update` within the existing declared ranges; verified with `npm run build` and both linters
+  before and after). `copy-webpack-plugin` has no update within its current range
 
 ## [1.0.5] - 2026-11-05
 

@@ -104,7 +104,7 @@ tracked separately so it is reviewed as its own change, not folded into an unrel
 - Script and style handles: `mackman-blocks-<name>`.
 - Pattern slugs: `mackman/<section>-<layout>-<tone>`, for example `mackman/cta-horizontal-dark`.
   Tone is `light` or `dark`. Filename matches the slug after `mackman/`.
-- Pattern categories in use: `call-to-action`, `cards`, `icons`, `testimonials`, `text`. Reuse these before adding new ones.
+- Pattern categories in use: `call-to-action`, `cards`, `hero`, `icons`, `testimonials`, `text`. Reuse these before adding new ones.
 
 ## Renaming for a client build
 

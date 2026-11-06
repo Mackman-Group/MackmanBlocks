@@ -273,6 +273,124 @@ function add_slug_body_class($classes) {
 add_filter('body_class', __NAMESPACE__ . '\add_slug_body_class');
 
 /**
+ * Lock the Page post type to the same Hero and Body content as the
+ * `mackman/hero-standard-light` and `mackman/text-standard-light` patterns
+ * (kept in sync with them by hand; the block trees are inlined here rather
+ * than referenced by slug, since a referenced pattern only resolves once a
+ * person opens it from the inserter, not when it arrives as a new post's
+ * starting content). Every new page starts from this, and the top-level
+ * structure can't be added to, removed from or reordered; each Group's own
+ * "templateLock":"contentOnly" allows editing its text and image only.
+ * Posts are unaffected and keep the full block editor.
+ *
+ * @param	array	$args		the post type's registration args
+ * @param	string	$post_type	the post type being registered
+ * @return array the filtered registration args
+ */
+function lock_page_template($args, $post_type) {
+  if ('page' !== $post_type) {
+    return $args;
+  }
+
+  $args['template'] = array(
+    array(
+      'core/group',
+      array(
+        'metadata' => array('name' => 'Hero'),
+        'templateLock' => 'contentOnly',
+        'style' => array('spacing' => array('padding' => array('top' => 'var:preset|spacing|large', 'bottom' => 'var:preset|spacing|large'))),
+        'layout' => array('type' => 'constrained'),
+      ),
+      array(
+        array('core/post-title', array('level' => 1)),
+        array(
+          'core/paragraph',
+          array(
+            'metadata' => array(
+              'name' => 'Subtitle',
+              'bindings' => array('content' => array('source' => 'core/post-meta', 'args' => array('key' => 'page_subtitle'))),
+            ),
+            'placeholder' => 'Add a subtitle…',
+            'fontSize' => 'medium',
+          ),
+        ),
+        array('core/post-featured-image', array('style' => array('spacing' => array('margin' => array('top' => 'var:preset|spacing|medium'))))),
+      ),
+    ),
+    array(
+      'core/group',
+      array(
+        'metadata' => array('name' => 'Body'),
+        'templateLock' => 'contentOnly',
+        'style' => array('spacing' => array('padding' => array('top' => 'var:preset|spacing|medium', 'bottom' => 'var:preset|spacing|large'))),
+        'layout' => array('type' => 'constrained'),
+      ),
+      array(
+        array('core/heading', array('content' => 'About this page')),
+        array('core/paragraph', array('placeholder' => 'Add page content…')),
+      ),
+    ),
+  );
+  $args['template_lock'] = 'all';
+
+  return $args;
+}
+add_filter('register_post_type_args', __NAMESPACE__ . '\lock_page_template', 10, 2);
+
+/**
+ * Register the subtitle shown under a page's title. Bound to the Hero
+ * pattern's subtitle paragraph with Block Bindings, in place of ACF.
+ */
+function register_page_subtitle_meta() {
+  register_post_meta('page', 'page_subtitle', array(
+    'single' => true,
+    'type' => 'string',
+    'show_in_rest' => true,
+    'sanitize_callback' => 'sanitize_text_field',
+    'auth_callback' => function () {
+      return current_user_can('edit_posts');
+    },
+  ));
+}
+add_action('init', __NAMESPACE__ . '\register_page_subtitle_meta');
+
+/**
+ * Restrict pages to the blocks the locked template above actually uses.
+ * `template_lock` already stops a page gaining new top-level blocks; this is
+ * a second guard that still matters for any page type built later with a
+ * lighter-touch lock (for example choosing between a few approved patterns
+ * rather than a single fixed one).
+ *
+ * @param	bool|string[]			$allowed_blocks	the allowed block type names, or true for no restriction
+ * @param	\WP_Block_Editor_Context	$context		the current block editor context
+ * @return bool|string[] the filtered allowed block type names
+ */
+function allowed_blocks_for_pages($allowed_blocks, $context) {
+  if (empty($context->post) || 'page' !== $context->post->post_type) {
+    return $allowed_blocks;
+  }
+
+  return array(
+    'core/paragraph',
+    'core/heading',
+    'core/image',
+    'core/list',
+    'core/list-item',
+    'core/quote',
+    'core/separator',
+    'core/buttons',
+    'core/button',
+    'core/columns',
+    'core/column',
+    'core/group',
+    'core/post-title',
+    'core/post-featured-image',
+    'core/pattern',
+  );
+}
+add_filter('allowed_block_types_all', __NAMESPACE__ . '\allowed_blocks_for_pages', 10, 2);
+
+/**
  * Work out an image's natural size by reading it from disk, for a local
  * file only. For an SVG, read its viewBox, and only when its inline style
  * sets the shown size, since without one its size would change.

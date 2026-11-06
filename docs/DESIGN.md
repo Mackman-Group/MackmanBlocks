@@ -94,16 +94,28 @@ Base body size 1.15rem, line height 1.5. Fluid typography is on.
 
 ## Section library
 
-Reset to empty on 2026-11-05 as part of taking the theme back to a bare-bones base (see `docs/MEMORY.md`).
-No patterns exist yet. Add them here, under the slug convention and categories in `CLAUDE.md`
-(`call-to-action`, `cards`, `icons`, `testimonials`, `text`), as each section is needed for a client build.
+Reset to empty on 2026-11-05 as part of taking the theme back to a bare-bones base (see `docs/MEMORY.md`),
+then given two reference patterns on 2026-11-06 as the Phase 3 locking foundation:
+
+| Section | Pattern slug | Category | Notes |
+| --- | --- | --- | --- |
+| Hero | `mackman/hero-standard-light` | hero | Page title, a subtitle bound to the `page_subtitle` post meta via Block Bindings, featured image. Content-only locked |
+| Body text | `mackman/text-standard-light` | text | One heading and one paragraph. Content-only locked |
+
+Both are used together as the `page` post type's default, locked block template (see Page types below). Add
+further patterns here, under the slug convention and categories in `CLAUDE.md`
+(`call-to-action`, `cards`, `hero`, `icons`, `testimonials`, `text`), as each section is needed for a client build.
 
 ## Page types
 
-Only the `index` template exists, used as WordPress's required fallback for every request: header part,
-post title, post content, footer part. Add a dedicated template (`front-page`, `page`, `single`, `archive`,
-`search`, `404`) as a client build needs one, built from `parts/header.html`, `parts/footer.html` and
-whatever patterns that page type needs.
+| Page type | Template | Structure | Editing |
+| --- | --- | --- | --- |
+| Page | `page` | Header, `post-content` (Hero + Body patterns), footer | Locked: every new page starts from the Hero and Body patterns; `template_lock: all` fixes the structure, `templateLock: contentOnly` on each pattern's Group allows editing their text and image only |
+| Fallback | `index` | Header, post title, post content, footer | Open — used for every request without a dedicated template (post, archive, search, 404, and any future front page) |
+
+`page.html` does not render its own title — the Hero pattern does, via `wp:post-title`, so it sits inside
+the locked, styled Hero section rather than a plain template-level heading. This is why it differs from
+`index.html`'s structure.
 
 <!-- Client theme: list each page type, its sections in order, and whether it is locked. -->
 
@@ -114,7 +126,9 @@ whatever patterns that page type needs.
 - Custom spacing sizes: off
 - Default spacing sizes: off
 - Core block patterns: removed
-- Allowed blocks: not yet restricted
+- Allowed blocks: restricted on `page` to a core content set (paragraph, heading, image, list, quote,
+  separator, buttons, columns, group, post-title, post-featured-image, pattern) — see `functions.php`.
+  Posts are unrestricted (full block editor, limited only by the settings above)
 
 ## Imagery and icons
 
