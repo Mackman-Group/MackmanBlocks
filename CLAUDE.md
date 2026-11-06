@@ -1,8 +1,9 @@
 # CLAUDE.md: Mackman Blocks
 
 This repository is the Mackman Group base block theme (Mackman Blocks). Every client theme starts as a
-copy of it. Your job is to build out a client theme from `docs/DESIGN.md` while keeping to the structure,
-tooling and conventions below. A developer must be able to maintain the result without AI.
+copy of it. Your job is to build out a client theme from the design-system and content briefs the studio
+and content team provide — turned into `docs/DESIGN.md` and `docs/CONTENT.md` — while keeping to the
+structure, tooling and conventions below. A developer must be able to maintain the result without AI.
 
 If an instruction here conflicts with a prompt, follow this file and say so.
 
@@ -12,7 +13,8 @@ Read these before doing anything else, in this order:
 
 1. `docs/MEMORY.md`: current state of the theme, decisions taken and why, known issues, open questions.
 2. `docs/DESIGN.md`: the design system. The source of truth for brand values, sections and page types.
-3. The `Unreleased` section and latest release in `docs/CHANGELOG.md`.
+3. `docs/CONTENT.md`: the content inventory for a client build, if present.
+4. The `Unreleased` section and latest release in `docs/CHANGELOG.md`.
 
 Then summarise in two or three lines what state the theme is in before starting work.
 If the design system is ambiguous or missing a value, stop and ask. Do not invent brand values.
@@ -25,7 +27,9 @@ If the design system is ambiguous or missing a value, stop and ask. Do not inven
   Contact Form 7 + Cloudflare Turnstile is the approved default form stack (agreed 2026-11-05, ported
   from Mackman Brand/Group/Research). `functions.php` already loads their assets only on pages with a
   form and defers Turnstile until first interaction; the plugins themselves still need installing per site.
-- Keep the existing folder structure, build tooling and naming. Do not restructure, rename or replace config.
+- Keep the existing folder structure, build tooling and config. Do not restructure or replace these.
+  Client-specific naming (theme name, PHP namespace, text domain, pattern slug prefix) is expected to
+  change per client build — see "Renaming for a client build" — but the structure around it does not.
 - theme.json is the single source of design values. No hard-coded colours, font sizes or spacing in SCSS or markup.
 - Every preset referenced in theme.json, templates or patterns must exist in theme.json.
 - All user-facing copy in UK English. Code identifiers follow WordPress conventions (for example `color`).
@@ -37,19 +41,26 @@ If the design system is ambiguous or missing a value, stop and ask. Do not inven
 | --- | --- | --- |
 | `docs/MEMORY.md` | Current state, decisions and reasons, known issues, gotchas. Curated, not a log. | End of every task that changes state or makes a decision |
 | `docs/DESIGN.md` | The committed design system. theme.json and patterns must match it. | Before any design change is built. Design changes start here. |
+| `docs/CONTENT.md` | Page-by-page copy, metadata and content structure for a client build. | Before building templates for a page type; when content changes |
 | `docs/CHANGELOG.md` | What changed, per release. Keep a Changelog format. | Every change that affects the theme, under `Unreleased` |
+| `docs/brief/` | The design-system and content documents exactly as the studio/content team supplied them. | Once, at intake. Never edited afterwards — see "Starting a client build" |
 
 Rules:
 
 - DESIGN.md leads, theme.json follows. If they disagree, flag it; do not silently pick one.
 - MEMORY.md stays short. Replace outdated lines rather than adding to them. History belongs in the changelog and git.
+- `docs/brief/` is the unedited historical record of what was asked for. DESIGN.md and CONTENT.md are the
+  live, buildable versions and may need to diverge from the brief (a colour failing WCAG AA, a page type
+  core can't lock cleanly) — when they do, log the divergence in MEMORY.md and say so to whoever sent the
+  brief, rather than silently resolving it.
 - Never record client personal data, credentials or keys in any docs file.
 
 ## Folder structure
 
 ```
 /assets/         Compiled output from /src (CSS, JS, fonts, images). Committed, never edited by hand.
-/docs/           MEMORY.md, DESIGN.md, CHANGELOG.md
+/docs/           MEMORY.md, DESIGN.md, CONTENT.md, CHANGELOG.md
+/docs/brief/     The original design-system and content documents, unedited (client builds only)
 /parts/          Template parts. Filenames lowercase and matching the slug (header.html, footer.html).
 /patterns/       Block patterns, one PHP file per pattern
 /src/css/        SCSS source. screen.scss (front end) and editor.scss, partials in /src/css/includes
@@ -95,16 +106,38 @@ tracked separately so it is reviewed as its own change, not folded into an unrel
   Tone is `light` or `dark`. Filename matches the slug after `mackman/`.
 - Pattern categories in use: `call-to-action`, `cards`, `icons`, `testimonials`, `text`. Reuse these before adding new ones.
 
-## Workflow
+## Renaming for a client build
 
-1. Complete the start-of-session reading. Confirm `docs/DESIGN.md` is complete enough to build from.
-2. Write brand values into theme.json first (palette, font families, font sizes, spacing scale, layout widths).
-3. Restrict editor controls in theme.json so clients can only use the design system.
-4. Build template parts (header, footer).
-5. Build sections as patterns in `/patterns`, reusing and adapting existing Mackman patterns where they fit.
-6. Build templates per page type from those patterns.
-7. Apply locking (below).
-8. Run the checks in "Definition of done" and report results.
+The names above are this base theme's own placeholders. Replace every one of them when forking for a
+client; the folder structure, build tooling and conventions around them do not change.
+
+- Theme folder: `mackman-blocks` → `<client-slug>`
+- `style.css` header: Theme Name, Description, Text Domain → the client's
+- `package.json`: `name` and `description`
+- `functions.php`: `namespace MGBlocks` → `namespace <ClientNamespace>` (PascalCase, no spaces)
+- Text domain: every `'mackman-blocks'` string (translation calls, style.css, `phpcs.xml.dist`) → `<client-slug>`
+- Script/style handles: `mackman-blocks-<name>` → `<client-slug>-<name>`
+- Pattern slug prefix: `mackman/` → `<client-slug>/`, keeping the `<section>-<layout>-<tone>` shape after it
+- `README.md` and any remaining "Mackman Blocks" references in `/docs`
+
+Keep: folder layout, webpack config, npm/composer scripts, the Mackman Group author/URI fields (unless the
+client's contract says otherwise — ask if unsure).
+
+## Starting a client build
+
+1. Intake: save the studio's design-system markdown and the content team's page-copy/structure document,
+   exactly as supplied, under `docs/brief/` (`design-system.md`, `content.md`).
+2. Build `docs/DESIGN.md` from the design-system brief and `docs/CONTENT.md` from the content brief,
+   adapting to this repo's slugs and format (see "Docs folder" rules on divergence).
+3. Rename the theme to the client (above).
+4. Write brand values into theme.json (palette, font families, font sizes, spacing scale, layout widths).
+5. Restrict editor controls in theme.json so clients can only use the design system.
+6. Build template parts (header, footer).
+7. Build sections as patterns in `/patterns`, using `docs/CONTENT.md` for real copy, reusing and adapting
+   existing Mackman patterns where they fit.
+8. Build templates per page type from those patterns.
+9. Apply locking (below).
+10. Run the checks in "Definition of done" and report results.
 
 Work in small, reviewable commits with clear messages. One concern per commit.
 

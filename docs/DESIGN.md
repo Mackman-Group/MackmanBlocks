@@ -7,7 +7,8 @@ Slugs in this file are the slugs used in theme.json and in block markup. Do not 
 without recording it in `CHANGELOG.md` as a breaking change, as live content depends on it.
 
 This file currently describes the **Mackman Blocks base theme**. For a client theme, replace the values
-with the client's design system and keep the structure.
+with the client's design system (from the studio's brief, kept unedited at `docs/brief/design-system.md`)
+and keep the structure.
 
 Last updated: 2026-11-05
 

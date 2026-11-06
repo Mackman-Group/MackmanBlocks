@@ -17,6 +17,14 @@ Write each entry for a developer who was not there: what changed and where, in o
 
 ## [Unreleased]
 
+### Added
+
+- `docs/CONTENT.md` and `docs/brief/` (with a README): scaffolding for a client build's content inventory
+  and the unedited original design-system/content documents it was built from
+- `CLAUDE.md`: a "Starting a client build" workflow and a "Renaming for a client build" checklist, covering
+  intake of the studio's design-system brief and the content team's copy/structure brief, and renaming the
+  theme's folder, namespace, text domain and pattern-slug prefix to the client
+
 ## [1.0.5] - 2026-11-05
 
 ### Added
